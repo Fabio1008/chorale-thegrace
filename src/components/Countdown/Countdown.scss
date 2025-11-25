@@ -1,0 +1,47 @@
+.countdown {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #5a2d82, #9b59b6);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .time-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    div {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      min-width: 70px;
+      transition: transform 0.3s;
+
+      span {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

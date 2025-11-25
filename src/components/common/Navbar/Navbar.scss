@@ -1,0 +1,34 @@
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;                // Active Flexbox
+  justify-content: space-between; // Logo à gauche, menu à droite
+  align-items: center;          // Centrage vertical
+}
+
+.logo img {
+  height: 40px; // Ajuste la taille du logo
+}
+
+.menu {
+  display: flex;
+  gap: 1rem; // Espacement entre les liens
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.active-link {
+  color: #ffcc00;
+  font-weight: bold;
+}
+.menu a.active-link {
+  text-decoration: underline;
+}

@@ -1,0 +1,123 @@
+/* --- HERO SECTION --- */
+
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+
+  .hero-image {
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+
+    .cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.75;
+      display: block;
+    }
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* --- GENERIC BUTTON --- */
+.btn {
+  background: #66b2ff;
+  padding: 0.8rem 1.4rem;
+  display: inline-block;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+
+  &:hover {
+    background: #5599dd;
+  }
+}
+
+/* --- SECTIONS --- */
+
+.home-page section {
+  padding: 3rem 2rem;
+  text-align: center;
+
+  h2 {
+    color: #66b2ff;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/* --- NEXT EVENT --- */
+
+.next-event {
+  background: #1d1d1d;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 600px;
+}
+
+/* --- CONCERT CARDS --- */
+
+.concerts-preview {
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .card {
+      background: #222;
+      color: white;
+      padding: 1.2rem;
+      border-radius: 10px;
+      width: 260px;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+/* --- RESPONSIVE MOBILE --- */
+
+@media (max-width: 768px) {
+  .hero {
+    .hero-image {
+      height: 35vh;
+    }
+
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

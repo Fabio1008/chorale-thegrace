@@ -1,0 +1,58 @@
+.home-page {
+  section {
+    padding: 3rem 2rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #66b2ff;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      color: #ccc;
+    }
+  }
+
+  .next-event {
+    background: #222;
+    color: #eee;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+
+  .concert-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .card {
+      background: #333;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #eee;
+      flex: 1;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .btn {
+    background: #66b2ff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #5599dd;
+    }
+  }
+}
