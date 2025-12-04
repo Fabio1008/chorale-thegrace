@@ -1,4 +1,5 @@
 import React from "react";
+import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function NextEvent() {
   return (
@@ -9,4 +10,20 @@ export default function NextEvent() {
       <a href="/concerts" className="btn">Voir les détails</a>
     </section>
   );
+}
+
+
+export async function addRepetitionEvent() {
+  const db = getFirestore();
+
+  await addDoc(collection(db, "events"), {
+    title: "Répétition chorale",
+    dayOfWeek: 5,             // vendredi
+    time: "19:00",
+    repeat: "weekly",
+    location: "Salle de répétition",
+    createdAt: serverTimestamp()
+  });
+
+  console.log("Évènement ajouté !");
 }

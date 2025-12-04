@@ -20,6 +20,7 @@ export default function Auth() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       setUser(userCredential.user);
+      setError(""); // reset erreur
     } catch (error) {
       console.error(error.message);
     }
