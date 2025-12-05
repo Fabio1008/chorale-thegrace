@@ -16,7 +16,7 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_APP_ID,
   measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
-
+console.log("API KEY =", import.meta.env.VITE_API_KEY);
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 let analytics;
@@ -28,9 +28,8 @@ if (typeof window !== "undefined" && location.hostname !== "localhost") {
 
 // Services Firebase
 export const auth = getAuth(app);
-const storage = getStorage(app);
-const db = getFirestore(app);
-const database = getDatabase(app);
+export const storage = getStorage(app);
+export const db = getFirestore(app);
+export const database = getDatabase(app);
 
-export { app, storage, db, database };
-console.log("API KEY =", import.meta.env.VITE_API_KEY);
+export { app};

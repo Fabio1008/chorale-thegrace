@@ -1,0 +1,196 @@
+@import "../../styles/variables.scss";
+
+
+.mySwiper {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .swiperSlide {
+        width: 100%;
+        max-height: 100vh;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        .img-swiper {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            min-width: 300px;
+            min-height: 400px;
+            max-width: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: $color-6;
+            z-index: 10;
+
+            .title1 {
+                font-size: clamp(3rem, 5vw, 5rem);
+                font-weight: 900;
+                color: $color-7;
+                font-family: $font-Rubik;
+                text-shadow: 0 1px 3px $color-1;
+                position: static;
+            }
+
+            .title2 {
+                font-size: clamp(3.5rem, 5vw, 6rem);
+                font-weight: 1000;
+                font-family: $font-Playfair-Display;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(60deg, $color-1, $color-4, $color-3, $color-4, $color-1);
+            }
+
+            .name {
+
+                font-size: clamp(2.5rem, 5vw, 3.5rem);
+                font-weight: 1000;
+                letter-spacing: 5px;
+                color: $color-7;
+                font-family: $font-Rubik;
+                text-shadow: 0 1px 3px $color-1;
+
+
+            }
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: clamp(1.2rem, 2vw, 2.5rem);
+                font-weight: bold;
+                font-family: $font-Rubik;
+                color: $color-7;
+                text-shadow: 3px 5px 10px $color-1;
+                padding: 0 2rem;
+            }
+
+            .scroll {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: auto;
+                text-align: center;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 2rem;
+                position: absolute;
+                bottom: -1rem;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 320px;
+
+            }
+        }
+    }
+}
+
+.swiper {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(20px + 40px);
+        height: calc(20px + 40px);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+
+        &:hover {
+            background: rgba(0, 0, 0, .5);
+        }
+
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+
+        &::after,
+        &::before {
+            font-size: clamp(1rem, 3vw, 2.5rem);
+            font-weight: 1000;
+            color: $color-3;
+            transition: color 0.3s ease;
+        }
+
+        &:hover::after,
+        &:hover::before {
+            color: $color-6;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: 0;
+        padding-bottom: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+
+        &-bullet {
+
+            background: $color-2;
+            opacity: 1;
+            width: clamp(0.1rem, 2vw, 1rem);
+            height: clamp(0.1rem, 2vw, 1rem);
+            border-radius: 50%;
+            box-shadow: 0 0.5px 2px $color-2;
+            transition: all 0.3s ease;
+
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+
+
+            &:hover {
+                background: $color-4;
+            }
+
+            &-active {
+                background: $color-3;
+            }
+        }
+    }
+
+    .swiper-scrollbar {
+        background: $color-2;
+
+        &-drag {
+            background: $color-3;
+        }
+    }
+}

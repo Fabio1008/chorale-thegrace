@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 2rem;
+    overflow: hidden;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+        padding: 0.5rem;
+        border-radius: 50%;
+        color: $color-4;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            color: $color-7;
+            background: $color-3;
+            box-shadow: 0 0 1rem $color-7;
+        }
+    }
+}
