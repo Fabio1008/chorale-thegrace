@@ -19,7 +19,7 @@ export default function Navbar() {
           Accueil
         </NavLink>
         <NavLink 
-          to="/membres" 
+          to="/Login" 
           className={({ isActive }) => isActive ? "active-link" : ""}
         >
           Membres
@@ -28,7 +28,13 @@ export default function Navbar() {
           to="/concerts" 
           className={({ isActive }) => isActive ? "active-link" : ""}
         >
-          Concerts
+          Evènements
+        </NavLink>
+        <NavLink 
+          to="/contact" 
+          className={({ isActive }) => isActive ? "active-link" : ""}
+        >
+          Contactez-nous
         </NavLink>
       </div>
     </nav>

@@ -8,13 +8,14 @@ import MemberPage from "./pages/MemberPage.jsx";
 import ConcertsPage from "./pages/ConcertsPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Login from "./pages/Login.jsx";
-import Unauthorized from "./components/Unauthorized/Unauthorized.jsx"; // 🔑 nouvelle page pour accès refusé
+import Unauthorized from "./components/Unauthorized/Unauthorized.jsx";
 
 // Composants
 import Navbar from "./components/common/Navbar/Navbar.jsx";
 import MemberArea from "./components/MemberArea/MemberArea.jsx";
 import Footer from "./components/common/Footer/Footer.jsx";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
+import Contact from "./components/contact/contact.jsx";
 
 import "./main.css";
 
@@ -22,22 +23,22 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
-        {/* 🔝 Barre de navigation */}
         <Navbar />
 
-        {/* 🔑 Contenu principal */}
         <main className="main-content">
           <Routes>
+
             {/* Pages publiques */}
             <Route path="/" element={<HomePage />} />
             <Route path="/membres" element={<MemberPage />} />
             <Route path="/concerts" element={<ConcertsPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/unauthorized" element={<Unauthorized />} />
+            <Route path="/contact" element={<Contact />} />
 
-            {/* Pages protégées */}
+            {/* 🔐 Page membre protégée */}
             <Route
-              path="/espace-membre"
+              path="/membres/espace"
               element={
                 <PrivateRoute allowedRoles={["admin", "chef", "choriste"]}>
                   <MemberArea />
@@ -45,7 +46,7 @@ function App() {
               }
             />
 
-            {/* Exemple : route réservée aux admins */}
+            {/* 🔐 Admin uniquement */}
             <Route
               path="/admin-panel"
               element={
@@ -55,12 +56,11 @@ function App() {
               }
             />
 
-            {/* Page 404 */}
+            {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
-        {/* 🔻 Footer affiché partout */}
         <Footer />
       </div>
     </BrowserRouter>

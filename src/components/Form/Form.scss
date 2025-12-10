@@ -1,0 +1,184 @@
+@import "../../styles/variables";
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+
+    legend {
+      font-size: clamp(3rem, 5vw, 7rem);
+      transform: rotate(-30deg);
+      color: $color-5;
+      margin-left: 1rem;
+      filter: drop-shadow(0 0 15px $color-1);
+    }
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid $color-6;
+    margin: 20px 0;
+
+    label {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(0.95rem, 3vw, 1.1rem);
+      color: $color-7;
+      pointer-events: none;
+      transition: 0.2s ease-in-out;
+
+      &.text {
+        top: -15px;
+        transform: translateY(0);
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0 5px;
+      height: 40px;
+      border: none;
+      color: $color-7;
+      outline: none;
+      font-size: clamp(0.95rem, 3vw, 1.1rem);
+      font-weight: 200;
+      background: none;
+      font-family: $font-Syne;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -10px;
+      color: $color-10;
+    }
+
+    textarea:focus ~ label,
+    textarea:valid ~ label {
+      top: -10px;
+      color: $color-10;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 20px;
+
+    button {
+      padding: 7px 18px;
+      font-weight: 400;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      letter-spacing: 2px;
+      transition: color 0.2s ease-in-out;
+    }
+  }
+}
+
+input[type="submit"] {
+  height: 40px;
+  width: 50%;
+  display: block;
+  background: $color-5;
+  border-radius: 1.5625rem;
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  color: $color-1;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 1rem auto;
+  transition: 0.2s ease-in-out;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal-content {
+    margin: 1rem;
+    background: $color-7;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .succes,
+    .error {
+      display: flex;
+      width: 100%;
+      color: $color-1;
+      font-size: clamp(1rem, 3vw, 2rem);
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+/* Animations */
+@keyframes rotation {
+  0% { transform: rotate(0deg) translateY(0); }
+  30% { transform: rotate(-55deg) translateY(0); }
+  80% { transform: rotate(-45deg) translateY(0px); }
+  100% { transform: rotate(0deg) translateY(-150px); }
+}
+
+@keyframes casse {
+  0% { transform: rotate(0deg) translateY(0); }
+  30% { transform: rotate(-55deg) translateY(0); }
+  60% { transform: rotate(-45deg) translateY(0px); }
+  100% { transform: rotate(120deg) translateY(-150px); }
+}
+
+@keyframes hue {
+  0% { filter: hue-rotate(0deg) saturate(100%); }
+  100% { filter: hue-rotate(360deg) saturate(100%); }
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid $color-5;
+  border-top: 5px solid $color-1;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite, hue 3s linear infinite;
+}

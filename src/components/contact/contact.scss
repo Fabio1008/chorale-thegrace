@@ -1,0 +1,131 @@
+@import "../../styles/variables.scss";
+
+
+.Contact {
+    width: 100%;
+    // background: radial-gradient(ellipse at bottom, $color-1 30%, $color-12 100%);
+
+
+    .container {
+        max-width: 1440px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        gap: 3.125rem;
+        padding: 4rem 1rem;
+
+        @media screen and (max-width: 768px) {
+            gap: 2rem;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .textContainer {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @media screen and (max-width: 768px) {
+                gap: 1rem;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: clamp(2.5rem, 5vw, 6.25rem);
+                font-weight: 600;
+                color: $color-7;
+                line-height: 88px;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            }
+
+            .item {
+                line-height: 1.5rem;
+
+                h2 {
+                    font-size: clamp(2rem, 5vw, 3rem);
+                    font-weight: 500;
+                    color: $color-3;
+                    font-family: $font-Whisper;
+                    margin-bottom: 1rem;
+                }
+
+                .row {
+                    font-size: clamp(0.95rem, 3vw, 1.1rem);
+                    font-weight: 200;
+                    color: $color-6;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 2rem;
+
+                    span {
+                        color: $color-7;
+                        font-size: 1.5rem
+                    }
+                }
+            }
+        }
+
+
+        .formContainer {
+            flex: 1;
+            position: relative;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+
+            .phoneSvg {
+                position: absolute;
+                margin: auto;
+                stroke: $color-3;
+                z-index: -1;
+            }
+
+            // form {
+            //     display: flex;
+            //     flex-direction: column;
+            //     gap: 1.25rem;
+            //     z-index: 5;
+
+
+            //     // input {
+
+            //     //     &:valid {
+            //     //         border: 1px solid green;
+            //     //     }
+            //     // }
+
+            //     input,
+            //     textarea {
+            //         padding: 1.25rem;
+            //         background: $color-1;
+            //         border: 1px solid $color-6;
+            //         color: $color-7;
+            //         border-radius: 4px;
+            //         outline-color: $color-10;
+            //         font-size: clamp(0.95rem, 3vw, 1.1rem);
+
+            //         &::placeholder {
+            //             color: $color-6;
+            //             font-size: clamp(0.9rem, 3vw, 1rem);
+            //         }
+            //     }
+
+            //     button {
+            //         padding: 1rem;
+            //         border: none;
+            //         font-weight: 500;
+            //         font-size: clamp(1rem, 3vw, 1.3rem);
+            //         letter-spacing: 5px;
+            //     }
+            // }
+        }
+    }
+}

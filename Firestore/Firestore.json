@@ -4,5 +4,47 @@
   "time": "18:30",
   "repeat": "weekly",
   "location": "Salle de répétition",
-  "createdAt": "timestamp"
+  "createdAt": "timestamp",
+
+
+  "users": {
+    "UID_ADMIN_123": {
+      "email": "amonkefabrice@gmail.com",
+      "role": "admin",
+      "displayName": "Fabrice Mongba",
+      "createdAt": { "__datatype__": "timestamp", "value": "2024-01-01T12:00:00Z" }
+    },
+    "UID_CHEF_456": {
+      "email": "amonkefabrice@gmail.com",
+      "role": "chef",
+      "displayName": "Chef de Chœur",
+      "createdAt": { "__datatype__": "timestamp", "value": "2024-01-02T12:00:00Z" }
+    },
+    "UID_CHORISTE_789": {
+      "email": "marinagandjipou8@gmail.com",
+      "role": "choriste",
+      "displayName": "Choriste Standard",
+      "createdAt": { "__datatype__": "timestamp", "value": "2024-01-03T12:00:00Z" }
+    }
+  }
+,
+  "btn_menu_contact": "Contactez-nous",
+  "slider_text1": {
+    "text1": "Chorale the grace,",
+    "text2": "Animation,messse, bapteme,",
+    "text3": "Mariage",
+    "btn1": "Visitez nous",
+    "btn2": "Voir nos animations"
+  },
+  "slider_text2": {
+    "text4": "Nous faisons des animations pendants nos sorties."
+  },
+  "slider_text3": {
+    "text5": "La chorale The Grace vous accueille à Mulhouse pour des répétitions, messe et temps de louange."
+  },
+  "home_join_us": {
+    "title": "Rejoignez-nous",
+    "description": "Envie de chanter avec nous ? Venez participer à nos répétitions !",
+    "btn": "Rejoignez-nous"
+  }
 }

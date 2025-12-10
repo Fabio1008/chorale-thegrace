@@ -144,6 +144,7 @@ const Slider = () => {
             initial="initial"
             whileInView="animate">
             <motion.h2 className="title1">
+               <motion.h2 className="name">Animation, messse, bapteme, mariage</motion.h2>
               {text1}
               <motion.span> {text2}</motion.span>
               <motion.span> {text3}</motion.span>
@@ -173,6 +174,7 @@ const Slider = () => {
             initial="initial"
             whileInView="animate">
             <motion.h2 className="title2">
+              <motion.h2 className="name">Nous faisons des animations pendants nos sorties.</motion.h2>
               {text4}
             </motion.h2>
           </motion.div>
@@ -198,6 +200,7 @@ const Slider = () => {
               whileInView={{ opacity: 1, scale: 1.4 }}>
               {text5}
             </motion.h3>
+            <motion.h3 className="name">La chorale The Grace vous accueille à Mulhouse pour des répétitions, messe et temps de louange.</motion.h3>
           </div>
         </SwiperSlide>
       </Swiper>

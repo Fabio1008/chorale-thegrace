@@ -8,11 +8,12 @@ import useUserRole from "../../hooks/useUserRole";
 import UploadForm from "../UploadForm/UploadForm";
 import { auth } from "../../config/firebase";
 import { Navigate } from "react-router-dom"; // 🔑 import pour redirection
+import { signOut } from "firebase/auth";
 
 export default function MemberArea() {
   const [activeTab, setActiveTab] = useState("profil");
   const [nextEventDate, setNextEventDate] = useState("2025-12-01");
-  const role = useUserRole();
+  const { role, loading } = useUserRole();
 
   const user = auth.currentUser;
 
@@ -24,7 +25,7 @@ export default function MemberArea() {
   return (
     <div className="member-area">
       <h2>Espace Membre</h2>
-
+      <button onClick={() => signOut(auth)}>Se déconnecter</button>
       {/* Onglets */}
       <div className="tabs">
         <button 

@@ -1,0 +1,22 @@
+{
+  "users": {
+    "UID_ADMIN_123": {
+      "email": "amonkefabrice@gmail.com",
+      "role": "admin",
+      "displayName": "Fabrice Mongba",
+      "createdAt": { "__datatype__": "timestamp", "value": "2024-01-01T12:00:00Z" }
+    },
+    "UID_CHEF_456": {
+      "email": "amonkefabrice@gmail.com",
+      "role": "chef",
+      "displayName": "Chef de Chœur",
+      "createdAt": { "__datatype__": "timestamp", "value": "2024-01-02T12:00:00Z" }
+    },
+    "UID_CHORISTE_789": {
+      "email": "marinagandjipou8@gmail.com",
+      "role": "choriste",
+      "displayName": "Choriste Standard",
+      "createdAt": { "__datatype__": "timestamp", "value": "2024-01-03T12:00:00Z" }
+    }
+  }
+}
